@@ -10,7 +10,7 @@ interface IRequest {
 @injectable()
 class CreateSpecificationUseCase {
   constructor(
-    @inject("SpecificationRepository")
+    @inject("SpecificationsRepository")
     private specificationsRepository: ISpecificationRepository
   ) {}
 
@@ -22,7 +22,7 @@ class CreateSpecificationUseCase {
       throw new Error("Specification Already Exists!");
     }
 
-    this.specificationsRepository.create({
+    await this.specificationsRepository.create({
       name,
       description,
     });

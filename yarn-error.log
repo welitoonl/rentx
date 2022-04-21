@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Weeli\.node\corepack\yarn\1.22.15\bin\yarn.js add tsyringe
+  C:\Program Files\nodejs\node.exe C:\Users\Weeli\.node\corepack\yarn\1.22.15\bin\yarn.js add ts-node-dev
 
 PATH: 
-  C:\Users\Weeli\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Weeli\bin;C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin;C:\Python310\Scripts;C:\Python310;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\wamp64\bin\mysql\mysql5.7.31;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\wamp64\bin\php\php5.6.40;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Users\Weeli\AppData\Local\Microsoft\WindowsApps;C:\Users\Weeli\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Weeli\.dotnet\tools;C:\Users\Weeli\AppData\Roaming\Composer\vendor\bin;C:\wamp64\bin\mysql\mysql5.7.31\bin;C:\Users\Weeli\AppData\Roaming\npm;C:\Users\Weeli\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Users\Weeli\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Weeli\bin;C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin;C:\Python310\Scripts;C:\Python310;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\wamp64\bin\mysql\mysql5.7.31;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\wamp64\bin\php\php5.6.40;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\wamp\bin\php\php5.6.40;C:\ProgramData\ComposerSetup\bin;C:\Users\Weeli\AppData\Local\Microsoft\WindowsApps;C:\Users\Weeli\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Weeli\.dotnet\tools;C:\Users\Weeli\AppData\Roaming\Composer\vendor\bin;C:\wamp64\bin\mysql\mysql5.7.31\bin;C:\Users\Weeli\AppData\Roaming\npm;C:\Users\Weeli\AppData\Local\GitHubDesktop\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.15
@@ -23,7 +23,7 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "dev": "ts-node-dev --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
     },
     "dependencies": {
@@ -35,6 +35,7 @@ npm manifest:
       "reflect-metadata": "^0.1.13",
       "swagger-ui-express": "^4.3.0",
       "ts-node": "^10.7.0",
+      "tsyringe": "^4.6.0",
       "typeorm": "0.2.45",
       "uuid": "^8.3.2"
     },
@@ -2498,7 +2499,7 @@ Lockfile:
       strip-bom "^3.0.0"
       strip-json-comments "^2.0.0"
   
-  tslib@^1.8.1:
+  tslib@^1.8.1, tslib@^1.9.3:
     version "1.14.1"
     resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
     integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
@@ -2514,6 +2515,13 @@ Lockfile:
     integrity sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==
     dependencies:
       tslib "^1.8.1"
+  
+  tsyringe@^4.6.0:
+    version "4.6.0"
+    resolved "https://registry.yarnpkg.com/tsyringe/-/tsyringe-4.6.0.tgz#14915d3d7f0db35e1cf7269bdbf7c440713c8d07"
+    integrity sha512-BMQAZamSfEmIQzH8WJeRu1yZGQbPSDuI9g+yEiKZFIcO46GPZuMOC2d0b52cVBdw1d++06JnDSIIZvEnogMdAw==
+    dependencies:
+      tslib "^1.9.3"
   
   type-check@^0.4.0, type-check@~0.4.0:
     version "0.4.0"
